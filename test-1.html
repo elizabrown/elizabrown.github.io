@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Publishing Web Pages from Scratch with Github Pages</title>
+<meta name="viewport" content="width=device-width">
+ <meta property="og:image" content="http://dannguyen.github.io/github-for-portfolios/images/main-logo.jpg" />
+ <meta property="og:title" content="Publishing Web Pages from Scratch with Github Pages" />
+ <meta property="og:site_name" content="Github Pages for Web Portfolios, a tutorial by Dan Nguyen" />
+ <meta property="og:type" content="blog" />
+
+
+
+
+<!-- Custom CSS -->
+
+<link rel="stylesheet" href="/github-for-portfolios/assets/main-161376837a3835ada3c85e61c30776d9.css">
+<script src="/github-for-portfolios/assets/jquery-352023206044a3523e9ad580cc6fc2f2.js"></script>
+<script src="/github-for-portfolios/assets/main-e02b489dc512a81c0d5c57872bf03447.js"></script>
+
+    </head>
+    <body>
+        <!-- begin  layouts/default -->
+<header class="header">
+  <div class="container">
+
+          <div class="site-title"><a href="/github-for-portfolios/">Creating Simple Web Portfolios using Github Pages</a></div>
+
+  </div>
+</header>
+
+
+<div class="home layout">
+      <!-- begin  layouts/lesson -->
+
+<article class="layout lesson">
+  <header>
+    <div class="header-background">
+      <img src="/github-for-portfolios/images/lessons/headers/2.jpg" alt="">
+
+    </div>
+
+    <div class="header-content">
+      <div class="container">
+        <div class="title">
+          <div class="lesson-number">Lesson 2</div>
+          <h1>Publishing Web Pages from Scratch with Github Pages</h1>
+        </div>
+      </div>
+
+      <div class="deck">
+        <div class="container">
+          <div class="row">
+            <div class="content-silo">
+                How to create and publish a file to the Web and how that is better/worse than publishing a blog post on WordPress.
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </header>
+
+
+  <section class="sec content">
+    <div class="container">
+
+      <div class="status">
+        This lesson is: <strong>Mostly complete [2014-04-03]</strong>
+      </div>
+
+
+      <section class="overview">
+
+  <p>In the previous lesson, we created a <code>README.md</code> file. And Github turned it into a webpage, <em>technically</em>. </p>
+
+  <p>But it’s just a quickie-homepage for our repo, with a URL that looks like any regular normal file (which, well, it is…):</p>
+
+  <p><code>github.com/username/username.github.io/README.md</code></p>
+
+  <p>Github provides a web publishing service called <a href="//pages.github.com">Github Pages</a>. In this lesson, we will learn how to publish a proper webpage via   <strong>Github Pages</strong>. </p>
+
+</section>
+
+<section class="row">
+  <div class="col-sm-6">
+    <p>According to the <a href="//pages.github.com">Github Pages documentation</a>, by creating a repo named  <code>username.github.io</code>, Github Pages knows (by convention) to publish anything in this repo to the corresponding URL:</p>
+
+    <p><a href="https://username.github.io">https://username.github.io</a></p>
+
+    <p>However, if you visit that URL, you’ll find a 404 page.</p>
+  </div>
+  <div class="col-sm-6">
+    <p><img src="/github-for-portfolios/images/lessons/2/github-pages-404.png" alt="howto" /></p>
+
+  </div>
+</section>
+
+<h2 id="create-indexhtml">Create index.html</h2>
+
+<section class="row">
+  <div class="col-sm-6">
+    <p>Go back to your <strong>repository homepage</strong> on github.com, e.g.</p>
+
+    <p><code>github.com/username/username.github.io</code></p>
+
+    <p>To the <strong>right</strong> of the repo name is a little <strong>paper-plus icon</strong>. Click on it to create a new file.</p>
+  </div>
+  <div class="col-sm-6">
+    <p><img src="/github-for-portfolios/images/lessons/2/github-create-new-file.png" alt="howto" /></p>
+  </div>
+</section>
+
+<section class="row">
+  <div class="col-sm-6">
+    <p>This will take you to the Github file editor. This time, you’ll have to specify a filename.</p>
+
+    <p>Name your filename: <code>index.html</code></p>
+
+    <p>Then type in some <strong>plain-text</strong> nonsense, e.g.:</p>
+
+    <pre><code>Hello world check out my homepage!
+
+
+----------------------------
+http://username.github.io
+</code></pre>
+
+  </div>
+  <div class="col-sm-6">
+    <p><img src="/github-for-portfolios/images/lessons/2/github-create-new-index.html-helloworld.png" alt="howto" /></p>
+  </div>
+</section>
+
+<section class="row">
+  <div class="col-sm-6">
+    <p>Commit the <code>index.html</code> file. You can add a <strong>commit message</strong> if you wish.</p>
+
+    <p>After the commit, you should be taken to your repo file listing, which should now contain two files:</p>
+
+    <ul>
+      <li><code>README.md</code></li>
+      <li><code>index.html</code></li>
+    </ul>
+
+    <p>The README file should be unchanged because you didn’t touch the <code>README.md</code></p>
+  </div>
+  <div class="col-sm-6">
+    <p><img src="/github-for-portfolios/images/lessons/2/github-pages-post-index-commit-first-tree-master-index.png" alt="howto" /></p>
+  </div>
+</section>
+
+<section class="row">
+  <div class="col-sm-6">
+    <p>So what changed? Believe it or not, <em>you’ve published your own webpage</em>.</p>
+
+    <p>As per the Github Pages convention, your new webpage exists at: </p>
+
+    <p><code>https://username.github.io</code></p>
+
+    <p>And if you visit that address, you should see a very unimpressive page.</p>
+
+  </div>
+  <div class="col-sm-6">
+
+    <p>Behold, your new webpage (<code>index.html</code>) on Github Pages:</p>
+
+    <p><img src="/github-for-portfolios/images/lessons/2/github-raw-index-html-page.png" alt="howto" /></p>
+  </div>
+</section>
+
+<section class="row">
+  <div class="col-sm-6">
+    <p>Not only is your homepage undecorated, but it lacks even the basic spacing between lines. If you <strong>View Source</strong> (either by right-clicking on the page, or by going to the <strong>View &gt; Developer &gt; View Source</strong> ) to see the <code>index.html</code> source code, you’ll see
+exactly what you entered into the Github file editor.</p>
+
+    <p>And yet your browser renders it all as a single line. If you don’t know anything about web development, this is the explanation: the text you entered into <code>index.html</code> wasn’t <em>actual HTML code</em>. It was just, well, plain text. And Github Pages, unlike most blogging and content sites, did nothing to help you with that. </p>
+  </div>
+  <div class="col-sm-6">
+
+    <p><img src="/github-for-portfolios/images/lessons/2/github-pages-plain-indexhtml-view-source-option.png" alt="view source from the menubar" /></p>
+
+    <p>The raw source (i.e. the plaintext) behind <code>index.html</code>:</p>
+
+    <p><img src="/github-for-portfolios/images/lessons/2/github-raw-index-view-source.png" alt="view source" /></p>
+
+  </div>
+</section>
+
+<h2 id="web-publishing-101">Web Publishing 101</h2>
+
+<section class="row">
+  <div class="col-sm-6">
+
+    <p>If you’ve ever written a webpage from scratch, i.e. from the <code>&lt;html&gt;</code> to the closing <code>&lt;/body&gt;</code> tag, you might already know the concepts (and can skip ahead). But if your Web publishing experience has been confined to posting in an “update status” box, or through your company’s content-management system, or even on your own WordPress/Tumblr, then what you’ve just done with Github Pages <strong>should seem very underwhelming</strong>.</p>
+
+    <p>And that’s OK. It’s underwhelming because Github Pages merely took the simple text you wrote:</p>
+
+    <pre><code>Hello world check out my homepage!
+
+
+----------------------------
+http://username.github.io
+</code></pre>
+
+    <p>– and put it on a public web server, <em>as is</em>.</p>
+
+    <p>So Github Pages basically did nothing here. It “published” your <code>index.html</code> page, if plopping it raw onto the Internet counts as “published.”</p>
+  </div>
+  <div class="col-sm-6">
+
+    <p><img src="/github-for-portfolios/images/lessons/2/github-raw-index-html-page.png" alt="howto" /></p>
+
+    <p><img src="/github-for-portfolios/images/lessons/2/github-raw-index-view-source.png" alt="view source" /></p>
+  </div>
+</section>
+
+<section class="row">
+  <div class="col-sm-6">
+    <p>(Again, if you have any experience with web development, you should probably skip this section).</p>
+
+    <p>Go back to your <strong>Github.com repo</strong> page (<em>not</em> your <strong>Github Pages</strong> homepage) and examine the plaintext behind <code>README.md</code>  </p>
+  </div>
+
+  <div class="col-sm-6">
+    <p><img src="/github-for-portfolios/images/lessons/2/github-raw-readme-md.png" alt="README.md raw text" /></p>
+  </div>
+</section>
+
+<section class="row">
+  <div class="col-sm-6">
+    <p>Now <strong>View Source</strong> of the rendered <code>README.md</code> (which, again, is visible by default on your Github.com repo page).</p>
+
+    <p>Notice how Github turned the plaintext behind <code>README.md</code> into <strong>actual HTML code</strong>; hence, why the headers and link text are properly formatted.</p>
+  </div>
+
+  <div class="col-sm-6">
+    <p><img src="/github-for-portfolios/images/lessons/2/github-html-source-rendered-readme-md.png" alt="README.md html source" /></p>
+  </div>
+</section>
+
+<section class="row">
+  <div class="col-sm-6">
+    <p>To get a proper webpage, with real HTML and all that, we’re going to have to write actual HTML ourselves.</p>
+
+    <p>In your repo page and file-listing, click through <code>index.html</code> and click the <strong>Edit</strong> button, which will let you edit <code>index.html</code> via the Github file editor.</p>
+  </div>
+
+  <div class="col-sm-6">
+    <p><img src="/github-for-portfolios/images/lessons/2/github-edit-button-indexhtml.png" alt="Edit index.html via the Github file editor" /></p>
+  </div>
+</section>
+
+<section class="row">
+  <div class="col-sm-6">
+    <p>Delete all the plaintext in <code>index.html</code> and replace it with some HTML. Such as:</p>
+
+    <div><div class="CodeRay">
+  <div class="code"><pre><span style="color:#070;font-weight:bold">&lt;html&gt;</span>
+  <span style="color:#070;font-weight:bold">&lt;head&gt;</span>
+    <span style="color:#070;font-weight:bold">&lt;title&gt;</span>My Homepage<span style="color:#070;font-weight:bold">&lt;/title&gt;</span>
+  <span style="color:#070;font-weight:bold">&lt;/head&gt;</span>
+
+
+  <span style="color:#070;font-weight:bold">&lt;body&gt;</span>
+    <span style="color:#070;font-weight:bold">&lt;h1&gt;</span>My homepage!<span style="color:#070;font-weight:bold">&lt;/h1&gt;</span>
+    
+    <span style="color:#070;font-weight:bold">&lt;h2&gt;</span>
+        ;)
+    <span style="color:#070;font-weight:bold">&lt;/h2&gt;</span>
+
+  <span style="color:#070;font-weight:bold">&lt;/body&gt;</span>
+<span style="color:#070;font-weight:bold">&lt;/html&gt;</span>
+</pre></div>
+</div>
+    </div>
+
+  </div>
+
+  <div class="col-sm-6">
+    <p><img src="/github-for-portfolios/images/lessons/2/github-revise-index.html.png" alt="Edit index.html by adding real HTML" /></p>
+  </div>
+</section>
+
+<section class="row">
+  <div class="col-sm-6">
+
+    <p><strong>Commit</strong> your changes. These should go into effect near-instantaneously, but feel free to take a couple-minutes break.</p>
+
+    <p>Then revisit your <strong>Github Pages</strong> homepage, e.g.</p>
+
+    <p><code>http://username.github.io</code></p>
+
+    <p>Pretty plain, but at least it’s a bonafide webpage; notice those properly-formatted <code>h1</code> and <code>h2</code> header tags.</p>
+  </div>
+
+  <div class="col-sm-6">
+    <p><img src="/github-for-portfolios/images/lessons/2/simple-index-html-with-html-rendered.png" alt="The new index.html" /></p>
+  </div>
+</section>
+
+<h2 id="web-publishing-with-ease-and-brevity">Web publishing, with ease and brevity</h2>
+<section class="row">
+  <div class="col-sm-6">
+    <p>So why even use Github Pages, especially if you have no intention of becoming a web developer or even learning basic HTML? </p>
+
+    <p>Good question. The simple answer is: In web publishing, as in basically every life choice, you have a tradeoff between:</p>
+
+    <ol>
+      <li>Power and control</li>
+      <li>Ease and brevity</li>
+    </ol>
+
+    <p><strong>Github Pages</strong> sits more on the <strong>power-and-control</strong>-side of the spectrum. If you want to put something on the Web, Github Pages lets you do it from your web browser, rather than the traditional route of setting up your own FTP/Apache server (and by using Github Pages, you’re trading the power and control you have by setting up your own web server).</p>
+  </div>
+
+  <div class="col-sm-6">
+    <p>Placeholder kitty 
+<img src="//placekitten.com/600/400" alt="TK cat" />
+<!-- ![The new index.html](/github-for-portfolios/images/lessons/2/ ) --></p>
+  </div>
+</section>
+
+<section class="row">
+  <div class="col-sm-6">
+    <p>With a service such as <a href="http://wordpress.com">WordPress</a>, you get the <em>ease</em> of creating web content with a <strong>rich-text editor</strong>, similar to a traditional word-processor.</p>
+
+    <p>When you hit <strong>Publish Post</strong>, WordPress takes care of wrapping your post content in HTML code and putting it in a reasonably pretty container. The tradeoff is that you can’t (<em>easily</em>) break out of those boundaries, not with out learning enough code to hack around WordPress. </p>
+
+    <p>It took me about five minutes to create a new blog on <a href="http://wordpress.com">WordPress.com</a>, pick a pre-built theme (<a href="http://wordpress.org/themes/mckinley">ThemeTrust’s “McKinley”</a>), and create a new post, with a headline, text, link, blockquote, and even some tags.</p>
+  </div>
+
+  <div class="col-sm-6">
+    <p><img src="/github-for-portfolios/images/lessons/2/wordpress-new-post-editor.png" alt="Creating a post in WordPress" /></p>
+  </div>
+</section>
+
+<section class="row">
+  <div class="col-sm-6">
+    <p>WordPress helpfully formats my post and fits it inside the pretty McKinley theme I’ve chosen. Check out the live version and notice all the niceties that WordPress adds, such as  making “Albert Einstein” a clickable link. And notice the extras: the tags are also clickable-links, a date has been added to the post, there are <strong>Share this:</strong> social buttons, and ooh, a courteous notice that my post might show ads, because I am, after all, using WordPress’s <em>free</em> service.</p>
+  </div>
+
+  <div class="col-sm-6">
+
+    <p><img src="/github-for-portfolios/images/lessons/2/simple-post-published-on-wordpress.png" alt="Publishing a simple post on WordPress" /></p>
+  </div>
+</section>
+
+<section class="row">
+  <div class="col-sm-6">
+    <p>If you want, you can go back to your <strong>Github.com repo page</strong> and create a new file, like: <code>blog-post.html</code>, and add the same content that I’ve added to my WordPress post. </p>
+  </div>
+
+  <div class="col-sm-6">
+    <p><img src="/github-for-portfolios/images/lessons/2/simple-post-pasted-into-github.png" alt="Blog post pasted into Github" /></p>
+  </div>
+</section>
+
+<section class="row">
+  <div class="col-sm-6">
+    <p>Commit the new <code>blog-post.html</code> file, which will be auto-published by <strong>Github Pages</strong>, and visit it at:</p>
+
+    <p><code>username.github.io/blog-post.html</code></p>
+
+    <p>And again, Github Pages does basically <em>nothing</em>.</p>
+
+  </div>
+
+  <div class="col-sm-6">
+    <p><img src="/github-for-portfolios/images/lessons/2/simple-post-published-on-github.png" alt="Blog post published via Github" /></p>
+  </div>
+</section>
+
+<h2 id="web-publishing-with-power-and-control">Web publishing, with power and control</h2>
+<section class="row">
+  <div class="col-sm-6">
+    <p>But sometimes nothing can be a pretty cool hand…as in, being handed the reins to create and publish content exactly as you need it to be.</p>
+
+    <p>Visit the Wikipedia page for GIF:</p>
+
+    <p><a href="http://en.wikipedia.org/wiki/GIF">http://en.wikipedia.org/wiki/GIF</a></p>
+
+  </div>
+  <div class="col-sm-6">
+
+    <p><img src="/github-for-portfolios/images/lessons/2/wikipedia-gif-page.png" alt="Wikipedia GIF" /></p>
+  </div>
+</section>
+
+<section class="row">
+  <div class="col-sm-6">
+    <p><strong>View Source</strong> of the Wikipedia entry on GIF, and then <strong>Select All</strong> the code and <strong>Copy</strong> it to your clipboard (i.e. via <strong>Ctrl-C</strong> or <strong>Cmd-C</strong>)</p>
+  </div>
+  <div class="col-sm-6">
+    <p><img src="/github-for-portfolios/images/lessons/2/wikipedia-gif-source.png" alt="View source of Wikipedia GIF" /></p>
+  </div>
+</section>
+
+<section class="row">
+  <div class="col-sm-6">
+    <p>If you have a WordPress blog, you can follow along as I try to paste this massive chunk of HTML code into the WordPress post editor (in the raw <strong>Text mode</strong>, not the <strong>Visual mode</strong>)</p>
+  </div>
+  <div class="col-sm-6">
+    <p><img src="/github-for-portfolios/images/lessons/2/wikipedia-gif-pasted-into-wordpress.png" alt="Wikipedia GIF into WordPress" /></p>
+  </div>
+</section>
+
+<section class="row">
+  <div class="col-sm-6">
+    <p><em>Some</em> of the raw HTML is interpreted correctly, but we lose all of the styling of Wikipedia. And for much of the HTML code, WordPress just basically barfs it out as raw text. </p>
+
+    <p>By having a user-friendly interface, WordPress necessarily has to make assumptions about what users often mistakenly copy-and-paste, and these assumptions end up being <em>restrictions</em>, to some degree.</p>
+
+    <p>You can see the attempted <a href="http://dantnguyen.wordpress.com/2014/04/02/wikipedia-gif-entry/">raw-Wikipedia-HTML-as-WordPress-blog-post on my sample blog</a>.</p>
+  </div>
+  <div class="col-sm-6">
+    <p><img src="/github-for-portfolios/images/lessons/2/wikipedia-gif-published-on-wordpress.png" alt="Wiki gif published on Wordpress" /></p>
+  </div>
+</section>
+
+<section class="row">
+  <div class="col-sm-6">
+    <p>Now copy-and-paste that same raw Wikipedia HTML into a new file in your Github repo, e.g. <code>wiki-gif.html</code>.</p>
+
+  </div>
+  <div class="col-sm-6">
+    <p><img src="/github-for-portfolios/images/lessons/2/wikipedia-gif-pasted-into-github.png" alt="Github wikipediagif" /></p>
+  </div>
+</section>
+
+<section class="row">
+  <div class="col-sm-6">
+    <p>Commit the new <code>wiki-gif.html</code> to your repo.</p>
+
+    <p>Wait a second for Github Pages to auto-publish that page and visit it at the expected URL:</p>
+
+    <p><code>http://username.github.io/wiki-gif.html</code></p>
+
+    <p>The two pages are <strong>identical</strong>, from the content, to Wikipedia’s exact styling, even down to the revolving-GIF.</p>
+
+  </div>
+  <div class="col-sm-6">
+    <p><img src="/github-for-portfolios/images/lessons/2/wikipedia-gif-copied.png" alt="Github wikipediagif" /></p>
+  </div>
+</section>
+
+<h2 id="things-weve-learned">Things we’ve learned</h2>
+
+<section class="row">
+  <div class="col-sm-6">
+    <h4 id="how-to-publish-to-github-pages">How to publish to Github Pages</h4>
+
+    <p><strong>Github Pages</strong> is a service run by Github that, when properly configured, will auto-publish the contents of your <strong>repo</strong> onto the Internet.</p>
+
+    <p>To get Github Pages to work for you, if your username is <code>your_username</code>, then you must create a repo named <code>your_username.github.io</code>.</p>
+
+    <p>After about 10 minutes, you can expect your content to be on the Web at the URL: <code>http://your_username.github.io</code></p>
+
+    <p>Going forward, I will refer to this as your <strong>portfolio homepage/website</strong></p>
+
+    <p><strong>Note:</strong> When I refer to the <strong>Github repo homepage</strong> for your portfolio, I mean the URL of the actual Github repo, e.g.:</p>
+
+    <p><code>https://github.com/your_username/your_username.github.io</code></p>
+
+  </div>
+  <div class="col-sm-6">
+    <p>Placeholder kitty:</p>
+
+    <p><img src="//placekitten.com/600/400" alt="TK" />
+<!-- ![repo page](/github-for-portfolios/images/lessons/1/key-concept-github-repo-page.png ) --></p>
+  </div>
+
+</section>
+
+<section class="row">
+  <div class="col-sm-6">
+    <h4 id="the-basic-structure-of-a-website">The basic structure of a website</h4>
+
+    <p>TK</p>
+
+  </div>
+  <div class="col-sm-6">
+    <p>Placeholder kitty:</p>
+
+    <p><img src="//placekitten.com/600/400" alt="TK" />
+<!-- ![repo page](/github-for-portfolios/images/lessons/1/key-concept-github-repo-page.png ) --></p>
+  </div>
+
+</section>
+
+<section class="row">
+  <div class="col-sm-6">
+    <h4 id="how-plaintext-is-different-from-raw-html">How plaintext is different from raw HTML</h4>
+
+    <p>TK</p>
+
+  </div>
+  <div class="col-sm-6">
+    <p>Placeholder kitty:</p>
+
+    <p><img src="//placekitten.com/600/400" alt="TK" />
+<!-- ![repo page](/github-for-portfolios/images/lessons/1/key-concept-github-repo-page.png ) --></p>
+  </div>
+
+</section>
+
+    </div>
+  </section>
+
+
+  <section class="sec comments">
+
+      <div class="container">
+
+                <div id="disqus_thread"></div>
+      <script type="text/javascript">
+        var disqus_shortname = 'danondisqus'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+      </div>
+
+
+
+  </section>
+
+</article>
+
+
+  <section class="sec">
+    <div class="container">
+      <div class="lessons-list">
+        <h2>Lessons List</h2>
+        
+<section class="lessons-list">
+<ul class="list list-unstyled">
+ 
+  
+
+      <li class="lesson">
+        <div class="row">
+
+        <div class="col-sm-4">
+          <div class="thumb">
+            <a href="/github-for-portfolios/lessons/setup-github/">
+              <img src="/github-for-portfolios/images/lessons/thumbs/1.jpg" alt="">
+            </a>
+          </div>
+        </div>
+
+        <div class="col-sm-8">
+          <div class="title">
+            <a href="/github-for-portfolios/lessons/setup-github/">1. Setting Up a Place on Github</a>
+          </div>
+          <div class="status">
+            Complete [2014-04-10]
+          </div>
+          <div class="deck">
+            How to open a Github account, create a project repository, and create a new file in the repository.
+          </div>
+
+        </div>
+        </div>
+
+      </li>
+
+  
+
+      <li class="lesson">
+        <div class="row">
+
+        <div class="col-sm-4">
+          <div class="thumb">
+            <a href="/github-for-portfolios/lessons/deploy-github-pages/">
+              <img src="/github-for-portfolios/images/lessons/thumbs/2.jpg" alt="">
+            </a>
+          </div>
+        </div>
+
+        <div class="col-sm-8">
+          <div class="title">
+            <a href="/github-for-portfolios/lessons/deploy-github-pages/">2. Publishing Web Pages from Scratch with Github Pages</a>
+          </div>
+          <div class="status">
+            Mostly complete [2014-04-03]
+          </div>
+          <div class="deck">
+            How to create and publish a file to the Web and how that is better/worse than publishing a blog post on WordPress.
+          </div>
+
+        </div>
+        </div>
+
+      </li>
+
+  
+
+      <li class="lesson">
+        <div class="row">
+
+        <div class="col-sm-4">
+          <div class="thumb">
+            <a href="/github-for-portfolios/lessons/premanufactured-github-pages/">
+              <img src="/github-for-portfolios/images/lessons/thumbs/3.jpg" alt="">
+            </a>
+          </div>
+        </div>
+
+        <div class="col-sm-8">
+          <div class="title">
+            <a href="/github-for-portfolios/lessons/premanufactured-github-pages/">3. Pre-Fab Pages with Github's Automatic Page Generator</a>
+          </div>
+          <div class="status">
+            Mostly complete [2014-04-03]
+          </div>
+          <div class="deck">
+            An (optional) tour of Github Pages pre-built templates and of Markdown, and practical experience with the concept of 'separation of content and presentation.'
+          </div>
+
+        </div>
+        </div>
+
+      </li>
+
+  
+
+      <li class="lesson">
+        <div class="row">
+
+        <div class="col-sm-4">
+          <div class="thumb">
+            <a href="/github-for-portfolios/lessons/clone-github-pages-repo/">
+              <img src="/github-for-portfolios/images/lessons/thumbs/4.jpg" alt="">
+            </a>
+          </div>
+        </div>
+
+        <div class="col-sm-8">
+          <div class="title">
+            <a href="/github-for-portfolios/lessons/clone-github-pages-repo/">4. Clone, Edit, Commit, and Sync</a>
+          </div>
+          <div class="status">
+            Mostly complete [2014-04-13]
+          </div>
+          <div class="deck">
+            How to install the Github desktop app, make a local copy of your Github repo, manage and edit your webpage project on your own operating system, and sync with your Github repo.
+          </div>
+
+        </div>
+        </div>
+
+      </li>
+
+  
+
+      <li class="lesson">
+        <div class="row">
+
+        <div class="col-sm-4">
+          <div class="thumb">
+            <a href="/github-for-portfolios/lessons/conflict-and-rollbacks/">
+              <img src="/github-for-portfolios/images/lessons/thumbs/5.jpg" alt="">
+            </a>
+          </div>
+        </div>
+
+        <div class="col-sm-8">
+          <div class="title">
+            <a href="/github-for-portfolios/lessons/conflict-and-rollbacks/">5. How Git Manages Conflicts and Collaboration</a>
+          </div>
+          <div class="status">
+            Just a stub [2014-04-10]
+          </div>
+          <div class="deck">
+            By using Git, you automatically get data protection features built into your project. This is what makes collaboration so (relatively) smooth. But even if you work alone, Git can reduce anxiety.
+          </div>
+
+        </div>
+        </div>
+
+      </li>
+
+  
+
+      <li class="lesson">
+        <div class="row">
+
+        <div class="col-sm-4">
+          <div class="thumb">
+            <a href="/github-for-portfolios/lessons/creating-your-portfolio/">
+              <img src="/github-for-portfolios/images/lessons/thumbs/6.jpg" alt="">
+            </a>
+          </div>
+        </div>
+
+        <div class="col-sm-8">
+          <div class="title">
+            <a href="/github-for-portfolios/lessons/creating-your-portfolio/">6. Creating and Publishing Your Portfolio</a>
+          </div>
+          <div class="status">
+            Just a draft [2014-03-30]
+          </div>
+          <div class="deck">
+            How to use HTML, JavaScript, and CSS to build your own web portfolio. And then, how to tweak and test things of which you have no real understanding.
+          </div>
+
+        </div>
+        </div>
+
+      </li>
+
+  
+
+</ul>
+</section>
+
+
+      </div>
+
+    </div>
+  </section>
+
+
+<!-- end  layouts/lesson -->
+
+</div>
+<!-- end  layouts/default -->
+
+        <footer class="footer">
+    <div class="container">
+
+        <div>
+          <a href="https://twitter.com/share" class="twitter-share-button" data-via="dancow" data-size="large">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+        </div>
+
+
+                <div class="contact">
+                  <p>
+                    By <a href="http://danwin.com">Dan Nguyen</a> | <a href="https://twitter.com/dancow">@dancow</a><br />
+                  </p>
+
+                  <p>Fork <a href="//github.com/dannguyen/github-for-portfolios">this tutorial on Github</a></p>
+                </div>
+
+    </div>
+</footer>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-49769365-1', 'dannguyen.github.io');
+  ga('send', 'pageview');
+
+</script>
+
+    </body>
+</html>
